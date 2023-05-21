@@ -11,7 +11,6 @@ const AllToy = () => {
     fetch("https://assignment-11-server-jahed121421.vercel.app/alldata")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setAlldatas(data);
       });
   }, [sort, input]);
@@ -47,7 +46,7 @@ const AllToy = () => {
         </li>
         <li>
           <button onClick={() => sorted("dsc")} className="btn btn-square">
-            sort by dsc
+            sort by Dsc
           </button>
         </li>
       </ul>

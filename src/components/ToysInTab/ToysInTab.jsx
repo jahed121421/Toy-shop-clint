@@ -67,7 +67,7 @@ const ToysInTab = () => {
                     .filter((toy) => toy.category === "Cat")
                     .map((toy) => (
                       <div
-                        key={toy.id}
+                        key={toy._id}
                         className="card w-96 bg-base-100 shadow-xl"
                       >
                         <figure>
@@ -97,7 +97,7 @@ const ToysInTab = () => {
               <TabPanel>
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
                   {toys
-                    .filter((toy) => toy.category === "Horse")
+                    .filter((toy) => toy.category == "Wolf")
                     .map((toy) => (
                       <div
                         key={toy._id}

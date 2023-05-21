@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 
 const MyToyRow = ({ mytoy, handleDelete }) => {
-  const { _id, name, description, image, price, quantity, email, saller_name } =
-    mytoy;
+  const {
+    _id,
+    name,
+    description,
+    image,
+    price,
+    quantity,
+    email,
+
+    saller_name,
+  } = mytoy;
 
   return (
     <>
