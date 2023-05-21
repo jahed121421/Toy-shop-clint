@@ -5,24 +5,52 @@ import useTitle from "../Custom Title/CustomTitle";
 const AllToy = () => {
   useTitle("ALLTOY");
   const [alldatas, setAlldatas] = useState([]);
+  const [sort, setSort] = useState([]);
   const { input, setInput } = useState("");
   useEffect(() => {
-    fetch("http://localhost:5000/alldata")
+    fetch("https://assignment-11-server-jahed121421.vercel.app/alldata")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setAlldatas(data);
       });
-  }, []);
-
+  }, [sort, input]);
+  const fetchtoys = async (sort) => {
+    try {
+      const resp = await fetch(
+        `https://assignment-11-server-jahed121421.vercel.app/alldata?sort=${sort}`
+      );
+      const data = await resp.json();
+      setAlldatas(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const sorted = (sortype) => {
+    setSort(sortype);
+  };
   const handleseach = () => {
-    fetch(`http://localhost:5000/datasearch/${input}`)
+    fetch(
+      `https://assignment-11-server-jahed121421.vercel.app/datasearch/${input}`
+    )
       .then((res) => res.json())
       .then((data) => setAlldatas(data));
   };
 
   return (
     <>
+      <ul className="flex">
+        <li>
+          <button onClick={() => sorted("asc")} className="btn btn-square">
+            sort by Asc
+          </button>
+        </li>
+        <li>
+          <button onClick={() => sorted("dsc")} className="btn btn-square">
+            sort by dsc
+          </button>
+        </li>
+      </ul>
       <div className="text-center my-5 ">
         <input
           onClick={(e) => setInput(e.target.value)}

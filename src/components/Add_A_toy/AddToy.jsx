@@ -20,13 +20,16 @@ const AddToy = () => {
       confirmButtonText: "Yes, Added it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch("http://localhost:5000/sendtoydata", {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
+        fetch(
+          "https://assignment-11-server-jahed121421.vercel.app/sendtoydata",
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify(data),
+          }
+        )
           .then((res) => res.json())
           .then((result) => {
             console.log(result);

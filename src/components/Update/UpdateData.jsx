@@ -7,7 +7,7 @@ const UpdateData = () => {
   const { description, image, price, quantity, _id } = loaddata;
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/mytoy/${_id}`, {
+    fetch(`https://assignment-11-server-jahed121421.vercel.app/mytoy/${_id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

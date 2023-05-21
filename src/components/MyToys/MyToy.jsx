@@ -21,9 +21,12 @@ const MyToy = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/mytoy/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://assignment-11-server-jahed121421.vercel.app/mytoy/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deleteCount > 0) {
@@ -37,7 +40,9 @@ const MyToy = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/mytoy?email=${user.email}`)
+    fetch(
+      `https://assignment-11-server-jahed121421.vercel.app/mytoy?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setMytoys(data));
   }, [user, mytoys]);

@@ -5,7 +5,7 @@ import "react-tabs/style/react-tabs.css";
 const ToysInTab = () => {
   const [toys, setToys] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/alldata")
+    fetch("https://assignment-11-server-jahed121421.vercel.app/alldata")
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
