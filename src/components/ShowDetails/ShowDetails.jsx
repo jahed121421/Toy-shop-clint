@@ -1,7 +1,9 @@
 import { FaArrowLeft, FaShoppingBag } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import useTitle from "../Custom Title/CustomTitle";
 
 const ShowDetails = () => {
+  useTitle("DETAILS");
   const toydetails = useLoaderData();
   const {
     name,

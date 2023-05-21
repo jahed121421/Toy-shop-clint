@@ -18,7 +18,7 @@ const Gallary = () => {
                 data-aos="fade-right"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
+                src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               />
             </div>
             <div className="md:w-1/2 p-1 md:p-2">
@@ -26,7 +26,7 @@ const Gallary = () => {
                 data-aos="fade-left"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+                src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               />
             </div>
             <div className="w-full p-1 md:p-2">
@@ -34,7 +34,7 @@ const Gallary = () => {
                 data-aos="fade-down"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                src="https://images.pexels.com/photos/3661197/pexels-photo-3661197.jpeg?auto=compress&cs=tinysrgb&w=600"
               />
             </div>
           </div>
@@ -44,7 +44,7 @@ const Gallary = () => {
                 data-aos="fade-up"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
+                src="https://images.pexels.com/photos/3661243/pexels-photo-3661243.jpeg?auto=compress&cs=tinysrgb&w=600"
               />
             </div>
             <div className="md:w-1/2 p-1 md:p-2">
@@ -52,7 +52,7 @@ const Gallary = () => {
                 data-aos="fade-down"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"
+                src="https://images.pexels.com/photos/12311906/pexels-photo-12311906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               />
             </div>
             <div className="md:w-1/2 p-1 md:p-2">
@@ -60,7 +60,7 @@ const Gallary = () => {
                 data-aos="fade-left"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp"
+                src="https://images.pexels.com/photos/1333318/pexels-photo-1333318.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
               />
             </div>
           </div>

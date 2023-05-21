@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import AlltoyRow from "../AlltoyRow/AlltoyRow";
+import useTitle from "../Custom Title/CustomTitle";
 
 const AllToy = () => {
+  useTitle("ALLTOY");
   const [alldatas, setAlldatas] = useState([]);
+  const { input, setInput } = useState("");
   useEffect(() => {
     fetch("http://localhost:5000/alldata")
       .then((res) => res.json())
@@ -12,14 +15,24 @@ const AllToy = () => {
       });
   }, []);
 
+  const handleseach = () => {
+    fetch(`http://localhost:5000/datasearch/${input}`)
+      .then((res) => res.json())
+      .then((data) => setAlldatas(data));
+  };
+
   return (
     <>
       <div className="text-center my-5 ">
         <input
+          onClick={(e) => setInput(e.target.value)}
           type="text"
           placeholder="Search here"
           className="input input-bordered input-primary w-full max-w-xs"
         />
+        <button onClick={handleseach} className="btn">
+          seach
+        </button>
       </div>
       <div>
         <div className="overflow-x-auto w-full">
@@ -43,7 +56,7 @@ const AllToy = () => {
               </tr>
             </thead>
             <tbody>
-              {alldatas.slice(0, 20).map((alldata, index) => (
+              {alldatas.map((alldata, index) => (
                 <AlltoyRow key={alldata._id} alldata={alldata} index={index} />
               ))}
             </tbody>

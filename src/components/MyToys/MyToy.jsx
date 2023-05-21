@@ -2,8 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import MyToyRow from "./MyToyRow/MyToyRow";
 import Swal from "sweetalert2";
+import useTitle from "../Custom Title/CustomTitle";
 
 const MyToy = () => {
+  useTitle("MYTOY");
   const { user } = useContext(AuthContext);
 
   const [mytoys, setMytoys] = useState([]);

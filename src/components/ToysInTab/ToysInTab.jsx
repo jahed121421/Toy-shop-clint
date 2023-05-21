@@ -100,7 +100,7 @@ const ToysInTab = () => {
                     .filter((toy) => toy.category === "Horse")
                     .map((toy) => (
                       <div
-                        key={toy.id}
+                        key={toy._id}
                         className="card w-96 bg-base-100 shadow-xl"
                       >
                         <figure>
@@ -175,7 +175,7 @@ const ToysInTab = () => {
                     .filter((toy) => toy.category === "Dragon")
                     .map((toy) => (
                       <div
-                        key={toy.id}
+                        key={toy._id}
                         className="card w-96 bg-base-100 shadow-xl"
                       >
                         <figure>
@@ -208,7 +208,7 @@ const ToysInTab = () => {
                     .filter((toy) => toy.category === "Unicorn")
                     .map((toy) => (
                       <div
-                        key={toy.id}
+                        key={toy._id}
                         className="card w-96 bg-base-100 shadow-xl"
                       >
                         <figure>
@@ -250,7 +250,7 @@ const ToysInTab = () => {
                     .filter((toy) => toy.category === "Wolf")
                     .map((toy) => (
                       <div
-                        key={toy.id}
+                        key={toy._id}
                         className="card w-96 bg-base-100 shadow-xl"
                       >
                         <figure>
@@ -283,7 +283,7 @@ const ToysInTab = () => {
                     .filter((toy) => toy.category === "Cow")
                     .map((toy) => (
                       <div
-                        key={toy.id}
+                        key={toy._id}
                         className="card w-96 bg-base-100 shadow-xl"
                       >
                         <figure>
@@ -316,7 +316,7 @@ const ToysInTab = () => {
                     .filter((toy) => toy.category === "Monkey")
                     .map((toy) => (
                       <div
-                        key={toy.id}
+                        key={toy._id}
                         className="card w-96 bg-base-100 shadow-xl"
                       >
                         <figure>

@@ -2,12 +2,14 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
+import useTitle from "../Custom Title/CustomTitle";
 
 const Register = () => {
   const { registeruser } = useContext(AuthContext);
   const navigate = useNavigate();
   const [error, setError] = useState("");
 
+  useTitle("REGISTER");
   const updatename = (user, name, photo) => {
     updateProfile(user, {
       displayName: name,

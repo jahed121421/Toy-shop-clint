@@ -1,4 +1,7 @@
+import useTitle from "../Custom Title/CustomTitle";
+
 const Blog = () => {
+  useTitle("BLOG");
   return (
     <>
       <div className="m-16">

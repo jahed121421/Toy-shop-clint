@@ -2,8 +2,10 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import useTitle from "../Custom Title/CustomTitle";
 
 const AddToy = () => {
+  useTitle("ADDTOY");
   const { user } = useContext(AuthContext);
 
   const { register, handleSubmit } = useForm();
@@ -33,6 +35,7 @@ const AddToy = () => {
       }
     });
   };
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -63,14 +66,13 @@ const AddToy = () => {
       />
       <br />
       <label htmlFor="Category" className="mr-3">
-        Category :
+        Sub Category :
       </label>
       <select {...register("category")}>
         <br />
         <option value="Dog">Dog</option>
         <option value="Cat">Cat</option>
         <option value="Unicorn">Unicorn</option>
-        <option value="TeddyBear">Teddy Bear</option>
         <option value="Horse">Horse</option>
         <option value="Dinosaur">Dinosaur</option>
         <option value="Cow">Cow</option>
@@ -78,10 +80,10 @@ const AddToy = () => {
         <option value="Dragon">Dragon</option>
         <option value="Wolf">Wolf</option>
       </select>
-      <label htmlFor="Category" className="mr-3">
-        Sub Category :
+      <label htmlFor="Sub Category" className="mr-3">
+        Category :
       </label>
-      <select {...register("sub_category")}>
+      <select>
         <br />
         <option value="PetAnimalToy">Pet Animal Toy</option>
         <option value="AncientAniamlToy">Ancient Aniaml Toy</option>
