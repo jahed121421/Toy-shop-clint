@@ -14,6 +14,7 @@ import Blog from "./components/Blog/Blog";
 import AddToy from "./components/Add_A_toy/AddToy";
 import MyToy from "./components/MyToys/MyToy";
 import UpdateData from "./components/Update/UpdateData";
+import PrivateRouter from "./components/Private/PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,11 @@ const router = createBrowserRouter([
       },
       {
         path: "alltoy",
-        element: <AllToy />,
+        element: (
+          <PrivateRouter>
+            <AllToy />
+          </PrivateRouter>
+        ),
       },
       {
         path: "blog",
@@ -50,15 +55,27 @@ const router = createBrowserRouter([
       },
       {
         path: "addatoy",
-        element: <AddToy />,
+        element: (
+          <PrivateRouter>
+            <AddToy />
+          </PrivateRouter>
+        ),
       },
       {
         path: "mytoy",
-        element: <MyToy />,
+        element: (
+          <PrivateRouter>
+            <MyToy />
+          </PrivateRouter>
+        ),
       },
       {
         path: "showdetails/:id",
-        element: <ShowDetails />,
+        element: (
+          <PrivateRouter>
+            <ShowDetails />
+          </PrivateRouter>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/alldata/${params.id}`),
       },
