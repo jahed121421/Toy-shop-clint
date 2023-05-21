@@ -57,12 +57,18 @@ const Navbar = () => {
           <li>
             <Link to="/alltoy">All Toys</Link>
           </li>
-          <li>
-            <Link to="mytoy">My Toys</Link>
-          </li>
-          <li>
-            <Link to="/addatoy">Add A Toys</Link>
-          </li>
+          {user ? (
+            <>
+              <li>
+                <Link to="mytoy">My Toys</Link>
+              </li>
+              <li>
+                <Link to="/addatoy">Add A Toys</Link>
+              </li>
+            </>
+          ) : (
+            ""
+          )}
           <li>
             <Link to="/blog">Blogs</Link>
           </li>
